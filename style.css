@@ -1542,12 +1542,18 @@ button {
     text-align: justify;
   }
 
-  .produk__gambar img {
+  .produk__gambar {
     width: 85%;
-    height: auto;
-    display: block;
+    max-width: 520px;
     margin-inline: auto;
     border-radius: 16px;
+  }
+
+  .produk__gambar img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 14px;
   }
 
   .hero__lencana {
