@@ -18,9 +18,13 @@
   --bayangan: 0 20px 45px -20px rgba(42, 27, 16, 0.35);
   --bayangan-kecil: 0 8px 20px -10px rgba(42, 27, 16, 0.25);
 
-  --serif: 'Instrument Serif', Georgia, serif;
+  /* --serif: 'Instrument Serif', Georgia, serif;
   --sans: 'Work Sans', system-ui, sans-serif;
-  --mono: 'IBM Plex Mono', monospace;
+  --mono: 'IBM Plex Mono', monospace; */
+
+  /* font */
+  --font-utama: 'Source Serif 4', serif;
+  --font-tegas: 'Roboto Slab', serif;
 
   --lebar-maks: 1180px;
   --radius: 18px;
@@ -38,7 +42,7 @@ html {
 }
 body {
   margin: 0;
-  font-family: var(--sans);
+  font-family: var(--font-utama);
   color: var(--coklat-tua);
   background: var(--krem-tua);
   -webkit-font-smoothing: antialiased;
@@ -55,11 +59,13 @@ a {
 }
 h1,
 h2,
-h3 {
-  font-family: var(--serif);
-  font-weight: 400;
-  margin: 0;
-  line-height: 1.08;
+h3,
+.hero__judul,
+.judul-bagian,
+.contact-luxury__heading h2 {
+  font-family: var(--font-tegas);
+  font-weight: 600;
+  letter-spacing: -0.02em;
 }
 p {
   margin: 0;
@@ -405,7 +411,8 @@ button {
 }
 
 .hero__judul {
-  font-size: clamp(2.6rem, 6vw, 4.6rem);
+  font-family: var(--font-tegas);
+  font-size: clamp(2.4rem, 4vw, 4rem);
   margin-bottom: 22px;
 }
 .hero__judul em {
@@ -508,6 +515,7 @@ button {
   background: var(--krem);
 }
 .judul-bagian {
+  font-family: var(--font-heading);
   font-size: clamp(2rem, 4vw, 2.9rem);
   margin-bottom: 20px;
   color: var(--coklat-tua);
@@ -539,6 +547,7 @@ button {
   align-items: center;
 }
 .tentang__teks p {
+  font-family: var(--font-utama);
   font-size: 16.5px;
   max-width: 480px;
   margin-bottom: 38px;
@@ -546,6 +555,11 @@ button {
 .tentang__teks p em {
   font-style: normal;
   color: var(--coklat-tua);
+  font-weight: 600;
+}
+
+.tentang__teks .judul-bagian {
+  font-family: var(--font-tegas);
   font-weight: 600;
 }
 
@@ -575,12 +589,14 @@ button {
 }
 
 .fitur__konten h3 {
+  font-family: var(--font-tegas);
   margin: 0 0 6px;
   font-size: 18px;
   color: var(--coklat-tua);
 }
 
 .fitur__konten p {
+  font-family: var(--font-utama);
   margin: 0;
   font-size: 14px;
   line-height: 1.6;
@@ -699,6 +715,11 @@ button {
   background: var(--krem);
 }
 
+#ukuran .judul-bagian {
+  font-family: var(--font-tegas);
+  font-weight: 600;
+}
+
 .ukuran__tab-bar {
   position: relative;
   display: flex;
@@ -729,11 +750,11 @@ button {
   color: var(--krem);
 }
 .ukuran__angka {
-  font-family: var(--serif);
+  font-family: var(--font-tegas);
   font-size: 24px;
 }
 .ukuran__satuan {
-  font-family: var(--mono);
+  font-family: var(--font-tegas);
   font-size: 11px;
   text-transform: uppercase;
 }
@@ -794,7 +815,7 @@ button {
 }
 
 .ukuran__ideal {
-  font-family: var(--mono);
+  font-family: var(--font-utama);
   font-size: 12px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -803,7 +824,7 @@ button {
 }
 .ukuran__ideal-teks {
   font-size: 21px;
-  font-family: var(--serif);
+  font-family: var(--font-utama);
   color: var(--coklat-tua);
   margin-bottom: 28px;
   line-height: 1.35;
@@ -820,18 +841,16 @@ button {
   justify-content: space-between;
   align-items: baseline;
 }
-.ukuran__spek dt {
-  font-size: 13.5px;
-  color: var(--coklat-lembut);
-}
-.ukuran__spek dd {
-  margin: 0;
-  font-family: var(--mono);
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--coklat-tua);
-}
 
+.ukuran__spek dt,
+.ukuran__spek dd {
+  font-family: var(--font-utama);
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--coklat-lembut);
+  line-height: 1.5;
+}
 .tabel-toggle {
   margin-top: 40px;
   max-width: 720px;
@@ -929,6 +948,7 @@ button {
 }
 
 .legal__teks p {
+  font-family: var(--font-utama);
   max-width: 520px;
   margin-bottom: 28px;
 }
@@ -950,6 +970,7 @@ button {
   flex-shrink: 0;
 }
 .legal__aman strong {
+  font-family: var(--font-tegas);
   display: block;
   font-size: 15px;
   color: var(--coklat-tua);
@@ -985,6 +1006,7 @@ button {
   margin-bottom: 12px;
 }
 .legal__lencana h3 {
+  font-family: var(--font-tegas);
   font-size: 16px;
   margin-bottom: 5px;
   color: var(--coklat-tua);
@@ -1136,6 +1158,7 @@ button {
 }
 
 .contact-luxury__heading h2 {
+  font-family: var(--font-tegas);
   margin: 0 0 28px;
 
   font-size: clamp(3.4rem, 6vw, 5.4rem);
@@ -1250,13 +1273,14 @@ button {
 }
 
 .contact-luxury__label {
-  font-family: var(--mono);
+  font-family: var(--font-utama);
   font-size: 10px;
   letter-spacing: 0.18em;
   color: var(--emas-terang);
 }
 
 .contact-luxury__content strong {
+  font-family: var(--font-tegas);
   font-size: 16px;
   line-height: 1.8;
   font-weight: 500;
@@ -1437,6 +1461,7 @@ button {
   }
 
   .contact-luxury__heading p {
+    font-family: var(--font-utama);
     max-width: 100%;
     font-size: 16px;
   }
@@ -1585,6 +1610,7 @@ button {
   }
 
   .legal__teks .judul-bagian {
+    font-family: var(--font-tegas);
     position: relative;
     margin-bottom: 340px;
   }
@@ -1700,6 +1726,7 @@ button {
 
   .contact-luxury__eyebrow {
     justify-content: center;
+    font-family: var(--font-utama);
   }
 
   .contact-luxury__heading h2 {
