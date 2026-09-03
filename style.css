@@ -415,7 +415,7 @@ button {
   font-size: clamp(2.4rem, 4vw, 4rem);
   line-height: 1;
   margin-top: 0;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 .hero__judul em {
   font-style: italic;
