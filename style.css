@@ -413,7 +413,9 @@ button {
 .hero__judul {
   font-family: var(--font-tegas);
   font-size: clamp(2.4rem, 4vw, 4rem);
-  margin-bottom: 22px;
+  line-height: 1;
+  margin-top: 0;
+  margin-bottom: 12px;
 }
 .hero__judul em {
   font-style: italic;
@@ -1598,6 +1600,7 @@ button {
   .hero .eyebrow {
     justify-content: flex-start;
     text-align: left;
+    margini-bottom: 14px;
   }
 
   .eyebrow {
