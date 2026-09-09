@@ -855,7 +855,7 @@ button {
 }
 .tabel-toggle {
   margin-top: 40px;
-  max-width: 720px;
+  max-width: 520px;
   margin-inline: auto;
 }
 .tabel-toggle summary {
@@ -890,6 +890,7 @@ button {
   width: 100%;
   border-collapse: collapse;
   font-size: 14.5px;
+  table-layout: fixed;
 }
 .tabel-spek th {
   background: var(--coklat-tua);
